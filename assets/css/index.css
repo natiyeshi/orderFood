@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --main-color:#FF8C42;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width:6px;
+    border-left:1px solid white;
+}
+::-webkit-scrollbar-thumb{
+    background-color:var(--main-color);
+}
+
+nav{
+    position: fixed;
+    padding: 1em;
+    width: 100%;
+    display: grid;
+    grid-template-columns:30% 70% ;
+    /* background: rgb(0, 0, 0,.7); */
+    transition: all 200ms ease-in-out 200ms;
+}
+
+.links{
+    font-size: large;
+    text-transform: capitalize;
+    display: right;
+    display: flex;
+    justify-self: right;
+    align-items: center;
+    margin-right: 20%;
+    gap: 4em;
+    width: 40%;
+    color: white;
+    justify-content: center;
+}
+
+.links .link:hover{
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background:  linear-gradient(rgba(0, 0, 0, 0.45), rgba(0,0, 0, 0.45)),url("/assets/img/Making\ Burger.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column  ;
+    text-align: center;
+    gap: 7em;
+}
+
+header .mid{
+    font-size: 50px;
+    font-weight: bolder;
+    color:white;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+header .foot{
+    font-size: large;
+    cursor: pointer;
+    padding: .2em .8em;
+    border-radius: .2em;
+    color: black;
+    font-weight: bold;
+    background-color: var(--main-color);
+}
+header .head{
+    font-family: monospace;
+    font-size: x-large;
+    padding: .2em;
+    border-radius: .2em;
+    color: rgb(189, 186, 186);
+    
+}
+
+.middle{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.middle .top{
+    text-align: center;
+    margin: 2em 0;
+    font-size: 3em;
+    font-weight: bolder;
+    text-shadow: 2px 2px 2px rgb(129, 129, 129);
+}
+
+.middle .mid{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.middle .mid .lists{
+    width: 100px;
+    background-color: var(--main-color);
+    text-align: center;
+    border-radius: .2em;
+    padding: .3em;
+    cursor: pointer;
+}
+
+
+.middle .mid .lists:hover{
+    background-color: #f16d1b;
+    box-shadow: .3em .6em 1em .1em rgb(211, 211, 211);
+}
+
+.middle .foods {
+    display: flex;
+    margin: 3em 0;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2em;
+
+}
+.middle .foods .card{
+    width: fit-content;
+    background: var(--main-color);
+    display: grid;
+    gap: 1em;
+    border-radius: .3em;
+    box-shadow: .3em .6em 1em .1em rgb(197, 197, 197);
+
+}
+
+.middle .foods .card .image{
+    /* padding: .1em; */
+}
+.middle .foods .card .head,.order-card .head,.orders .head{
+    text-align: center;
+    font-weight: bolder;
+    font-size: x-large;    
+}
+
+.middle .foods .card .task,.order-card .task{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.middle .foods .card .disc,.order-card .disc{
+    align-self: center;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.order , .cart{
+    background-color: white;
+    padding: .4em;
+    border-radius: .4em;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+}
+
+
+
+.order{
+    background-color: rgb(0, 90, 23);
+    color: white;
+}
+
+   
+
+.order:hover,.cart:hover{
+    box-shadow: .3em .3em 1em .1em rgb(71, 71, 71);
+    position: relative;
+    transition: all 10ms ease-in-out 10ms;
+    bottom: 1px;    
+}
+
+
+.active{
+    background: #441a00 !important;
+    color:white;
+}
+
+footer{
+    height: 50vh;
+    background-color: #05141d;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2em;
+}
+
+footer .left{
+    font-size: larger;
+
+}
+
+footer .media{
+    margin-top: .6em;
+    display: flex;
+    gap: .8em;
+    cursor: pointer;
+}
+
+footer svg:hover{
+    fill:white;
+}
+
+footer .right .footer-head{
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.blure-bg{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background:  linear-gradient(rgba(0, 0, 0, 0.65), rgba(0,0, 0, 0.65));
+    display: none;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+
+.order-card{
+    width: fit-content;
+    background: rgb(205, 209, 144);
+    display: grid;
+    gap: 1em;
+    border-radius: .3em;
+    padding-bottom: .6em;
+}
+
+.cartOrders{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background:  linear-gradient(rgba(0, 0, 0, 0.65), rgba(0,0, 0, 0.65));
+    display: none;
+    justify-content: right;
+    align-items: center;
+    justify-items: center;
+}
+
+.order-card img{
+    width: 500px;
+}
+
+.cancel{
+    width: 50%;
+    height: 100vh;
+}
+
+.orders{
+    
+    width: 50%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: .2em 0 0 .2em;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    overflow: scroll;
+    flex-direction: column;
+}
+
+.orders .card{
+    margin-top: .3em;
+    width: 90%;
+    height: fit-content;
+    background-color: var(--main-color);
+    display: flex;
+    border-radius: .2em;
+    gap: 9em;
+    /* justify-content: space-evenly; */
+
+}
+.orders img{
+    width: 300px;
+}
+.orders .right{
+    margin-top: 3em;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+}
+
+.card .remove{
+    background-color: rgb(105, 0, 0);
+    margin-right: .3em;
+}

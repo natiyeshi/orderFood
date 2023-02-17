@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register User</title>
+
+    <link rel="stylesheet" href="/assets/css/register.css">
+</head>
+<body>
+    <nav id="nav">
+        <img src="/assets/img/logo-no-background.png" width="100px" alt="">
+        <div class="links">
+            <div class="link" onclick="location.href='#head'">home</div>
+            <div class="link" onclick="location.href='#middle'">foods</div>
+            <div class="link" onclick="location.href='#footer'">contact</div>
+        </div>
+    </nav>        
+
+    <main>
+        
+        <div class="register">
+
+            <div class="head"> Register User</div>
+
+            <form onsubmit="Validate()">
+                <div class="line">
+                    <label for="">first-name</label>
+                    <input type="text" id="fname" placeholder="first name">
+                </div>
+
+                <div class="line">
+                    <label for="">last-name</label>
+                    <input type="text" id="lname" placeholder="first name">
+                </div>
+
+                <div class="line">
+                    <label for="">phone number</label>
+                    <input type="number" id="phonenumber" placeholder="first name">
+                </div>
+
+              
+
+                <div class="line">
+                    <label for="">City</label>
+                    <input type="text" list="datalists" placeholder="City">
+                    <datalist id="datalists">
+                            <option value="Addis Ababa">
+                            <option value="Coconut">
+                            <option value="Mint">
+                            <option value="Strawberry">
+                            <option value="Vanilla">
+                    </datalist>
+                </div>
+
+                <div class="line">
+                    <label for="">Password</label>
+                    <input type="password" id="password" placeholder="Password">
+                </div>
+                <div class="line">
+                    <label for="">Confirm</label>
+                    <input type="password" id="cpassword" placeholder="Password">
+                </div>
+
+
+
+                <div class="line">
+                    <button> Register</button>
+                </div>
+            </form>
+            
+
+        </div>        
+
+    </main>
+
+</body>
+</html>
+<script src="/assets/js/register.js"></script>
