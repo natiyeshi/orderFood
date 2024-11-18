@@ -1,0 +1,17 @@
+#main{
+    
+}
+
+button{
+    font-size: xx-large;
+    padding: 1em;
+    border: none;
+    margin-left: 1em;
+    background-color: #FF8C42;
+    border-radius: .3em;
+    cursor: pointer;
+}
+
+button:hover{
+    box-shadow: .3em .3em .5em .3em rgb(211, 211, 211);
+}

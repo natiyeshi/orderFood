@@ -69,6 +69,7 @@ main{
     gap: 3em;
     border-radius: .4em;
     box-shadow: .3em .3em 1em .3em rgb(207, 207, 207);
+    text-transform: capitalize;
 }
 
 .register .head{
@@ -79,7 +80,7 @@ main{
 }
 
 .register .line{
-    margin: .2em 0 ;
+    margin: .3em 0 ;
 }
 
 .register label{
@@ -108,4 +109,16 @@ main{
 
 .line button:hover{
     box-shadow: .3em .3em 1em .4em #d4631c ;
+}
+
+.error{
+    color: rgb(255, 0, 0);
+    margin-left: .3em;
+}
+
+.link{
+    color: red;
+    background: rgb(224, 224, 224);
+    padding: .3em;
+    border-radius: .3em;
 }

@@ -183,7 +183,11 @@ function Remove(index,place){
 
 function showCart(target){
     document.querySelector(".orders").innerHTML = ""
+    
     if(target){
+        if(cart.length < 1){
+            document.querySelector(".orders").innerHTML = "<br><br><br><br><br><br><strong>Empty Cart </strong> </pre>"
+        }
         for(i of cart){
             document.querySelector(".orders").innerHTML += cartDiv(foods[i].image,foods[i].name,i) 
         }
@@ -199,6 +203,9 @@ function showCart(target){
 function showOrder(target){
     document.querySelector(".orders").innerHTML = ""
     if(target){
+        if(orderHistory.length < 1){
+            document.querySelector(".orders").innerHTML = "<br><br><br><br><br><br><strong>Empty Order </strong> </pre>"
+        }
         for(i of orderHistory){
             document.querySelector(".orders").innerHTML += orderDiv(foods[i].image,foods[i].name,i) 
         }

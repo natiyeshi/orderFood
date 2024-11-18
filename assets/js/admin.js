@@ -66,9 +66,13 @@ function card(name,amount,image,place,ind,av){
             <div class="head">${name}</div>
             <div class="task">
                 ${str}
-                <div class="cart" onclick="update(${ind})">Update</div>
+                <div class="cart" onclick="showUpdate(${ind},true)">Update</div>
             </div>
-                <div class="disc">ktfo is good</div>
+                <div class="disc">
+                    <strong>Place :</strong><i>${place}</i><br><br>
+                    <strong>Amount :</strong><i>${amount} Birr</i>
+                 <br>
+                </div>
             </div>  
     `
 }
@@ -94,9 +98,44 @@ function soldOut(index,element){
 }
 
 
-function update(index){
-    
+function up(price,name,place,index){
+    return `
+            <div class="updated-file">
+            <h1>update</h1>
+            <div>
+                <label for="">price</label>
+                <input type="text" id="price" value="${price}">
+                <label for="">name</label>
+                <input type="text" id="name" value="${name}">
+                <label for="">place</label>
+                <input type="text" id="place" value="${place}"> 
+                <button onclick="updateFinish(${index})">update</button>
+            </div>
+        </div>
+    `
+}
+
+function showUpdate(index,bool){
+    if(!bool){
+        document.querySelector(".blure-bg").style.display = "none"
+        return
+    }
+    document.querySelector(".blure-bg").innerHTML = up(foods[index].amount,foods[index].name,foods[index].place,index)
+    document.querySelector(".blure-bg").style.display = "flex"
+
 }
 
  
+function updateFinish(ind){
+    document.querySelector(".blure-bg").style.display = "none"
+
+    price = document.querySelector("#price").value
+    names = document.querySelector("#name").value
+    place = document.querySelector("#place").value
+    
+    foods[ind].amount = price
+    foods[ind].name = names
+    foods[ind].place = place
+    changeItems('all')
+}
 
